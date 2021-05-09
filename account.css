@@ -1,0 +1,39 @@
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.table-income, .total-income{
+    background-color: green;
+    border-radius: 30px;
+}
+.table-expense, .total-expenses{
+    background-color: red;
+    border-radius: 30px;
+}
+.input-type-bg, .btn-add, .amount-sym{
+    background-color: green;
+    color: white;
+}
+.total-money{
+    background-color: blue;
+    border-radius: 30px;
+}
+.header{
+    color: yellow;
+}
+.changerColor{
+    color: white;
+    border-color: red;
+    background-color: red !important;
+}
+
+.bg-sec{
+    background:   url(/Img/monet-bg-3.jpeg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
+}

@@ -1,0 +1,294 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: black;
+    z-index: 0;
+    
+}
+#results, #loader { 
+    display: none;
+}
+.header-dice, .details, .middle-part, .down-part, .msgpop-main{
+    background-color: black;
+}
+.dice-game{
+    background: url(/Img/dice-bg-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-clip: border-box;
+    width: 70vw;
+}
+.underlin{
+    background: black;
+    height: 5px;
+    width: 350px;
+
+}
+.underline{
+    background-color: yellow;
+    height: 5px;
+    width: 630px;
+    animation: moveRight 3s ease-in 2s;
+    animation-fill-mode: backwards;
+}
+.rules{
+    animation: moveLeft 3s ease-out 2s;
+    animation-fill-mode: backwards;
+}
+.rule-1{
+    animation: dissapear 5s ease-in 5s;
+    animation-fill-mode: backwards;
+}
+.rule-2{
+    animation: dissapear 5s ease-in 10s;
+    animation-fill-mode: backwards;
+}
+.rule-3{
+    animation: dissapear 5s ease-in 15s;
+    animation-fill-mode: backwards;
+}
+.rule-4{
+    animation: dissapear 5s ease-in 20s;
+    animation-fill-mode: backwards;
+}
+.rule-5{
+    animation: dissapear 5s ease-in 25s;
+    animation-fill-mode: backwards;
+}
+.rule-6{
+    animation: dissapear 5s ease-in 30s;
+    animation-fill-mode: backwards;
+}
+.rule-7{
+    animation: dissapear 5s ease-in 35s;
+    animation-fill-mode: backwards;
+}
+.rule-8{
+    animation: dissapear 5s ease-in 40s;
+    animation-fill-mode: backwards;
+}
+.player-current-life{
+    background-color: black;
+}
+.title{
+    background-color: transparent;
+    color: white;
+    animation: rotates 2s ease-in-out;
+    animation-fill-mode: backwards;
+}
+.play-game{
+    background-color: purple;
+    color: white;
+}
+.play-game-word{
+    color: purple;
+}
+#name-0, .life-0{
+    color: blue;
+}
+#name-1, .life-1{
+    color: red;
+}
+.active{
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),  url(/Img/dice-active.jpeg) ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.title-move{
+    animation: dance 5s infinite;
+}
+@keyframes dance{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes dissapear{
+    0%{opacity: 0;}
+    100%{opacity: 10;}
+}
+@keyframes rotates{
+    0%{ transform: rotateX(189deg);
+        opacity: 0;}
+    100%{transform: rotate(0deg);
+        opacity: 10;}
+}
+.heightAttain{
+    height: 420px;
+}
+.attract1{
+    color: blue;
+    font-size: 35px;
+    animation: show 5s infinite;
+    width: 400px;
+    margin: auto;
+    
+}
+@keyframes show {
+    0%{  
+       background-color: black;
+    }
+    25%{
+        background-color: transparent;
+    }
+    50%{
+        background-color: black;
+    }
+    75%{
+    background-color: transparent;
+    }
+    100%{
+    background-color: black;
+    }
+}
+@keyframes moveLeft{
+    0%{ transform: translateX(100px);
+        opacity: 0;}
+    100%{transform: translateX(0px);
+        opacity: 10;}
+}
+@keyframes moveRight{
+    0%{ transform: translateX(-100px);
+        opacity: 0;}
+    100%{transform: translateX(0px);
+        opacity: 10;}
+}
+.btn-reset-0{
+    background-color: blue;
+    float: left;
+}
+.btn-reset-0:hover {
+    box-shadow: 30px 3px 10px 5px  white;
+}
+.btn-reset-1:hover{
+    box-shadow: -30px 3px 10px 5px white;
+}
+.btn-reset-1:active{
+    transform: translateX(-20px);
+    box-shadow: -30px 3px 10px 5px red;
+}
+.btn-reset-0:active{
+    transform: translateX(20px);
+    box-shadow: 30px 3px 10px 5px blue;
+}
+.btn-reset-1{
+    background-color: red;
+}
+.go-up, .btn-reset-1{
+    float: right;
+}
+.link-up, .link-up:hover{
+    text-decoration: none;
+}
+.down-part::after{
+content: '';
+display: table;
+clear: both;
+}
+.btn-roll, .btn-hold{
+    position: relative;
+    z-index: 1;
+    /* background-color: white; */
+}
+.btn-roll::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: all 1s;
+}
+.btn-hold::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    transition: all 1s;
+}
+.btn-roll:hover::after, .btn-hold:active::after{
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
+}
+/* media query for 600px */
+@media (max-width: 37.5em){
+    html{
+        font-size: 55%;
+    }
+    body{
+        overflow-y: hidden;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    ul{
+        font-size: 1.3rem;
+    }
+    .dice-game{
+        width: 100vw;
+    }
+    .underline{
+        height: 5px;
+        width: 80vw;
+    }
+    .heightAttain{
+        height: 50vh;
+    }
+    .attract1{
+        color: blue;
+        font-size: 35px;
+        animation: show 5s infinite;
+        width: 400px;
+        margin: auto;
+    }
+    .col-md-5 {
+        width: calc((100% - 15rem) / 2);
+        margin: 0 auto;
+    }
+    .col-md-2{
+        width: 15rem;
+        height: 40vh;
+    }
+    .btn-hold, .btn-roll, .display-result{
+        font-size: 2rem;
+        width: 100% !important;
+    }
+    .header-dice{
+        height: 100%;
+    }
+    .player-background-point, .player-current-box, .player-current-life, .player-1-name, .player-2-name{
+        margin: 0 auto;
+        width: 10rem !important;
+    }
+    .attract1{
+        font-size: 35px;
+        width: 100%;
+    }
+    .title{
+    background-color: transparent !important;
+    font-size: 3rem !important;
+    }
+    .msgpop-main{
+        font-size: 2rem;
+    }
+    .btn-reset-0, .btn-reset-1{
+        font-size: 2rem;
+        width: 30%;
+    }
+}
+/* end of media query for 600px */
