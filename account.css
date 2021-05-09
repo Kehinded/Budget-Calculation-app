@@ -30,7 +30,7 @@ body {
 }
 
 .bg-sec{
-    background:   url(/Img/monet-bg-3.jpeg) ;
+    background:   url(./Img/monet-bg-3.jpeg) ;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
