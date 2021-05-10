@@ -37,3 +37,51 @@ body {
     background-clip: border-box;
     background-attachment: fixed;
 }
+
+@media only screen and (max-width:38em){
+    html{
+        /* font-size: 55%; */
+    }
+    .header{
+        font-size: 1.4rem;
+    }
+    .input-section{
+        padding: 0 !important;
+    }
+    .total-money{
+        font-size: 120%;
+        width: 70% !important;
+    }
+    .total-income{
+        font-size: 100%;
+        width: 70% !important;
+    }
+    .total-expenses{
+        font-size: 100%;
+        width: 70% !important;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+    .input-group-prepend{
+       width: 100% !important;
+       transform:  translateX(30%);
+       margin: .5rem;
+    }
+    .form-control{
+        width: 60% !important;
+        padding: 1.5rem 2rem;
+        border-radius: 2rem !important;
+        margin-bottom: .5rem;
+        transform: translateX(5%);
+    }
+    .btn{
+        margin-top: .5rem;
+    }
+    .table{
+        font-size: 55%;
+    }
+}
+
